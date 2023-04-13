@@ -4,6 +4,17 @@ import org.junit.jupiter.api.Test;
 class RadioTest {
 
     @Test
+    public void test() {
+        Radio radio = new Radio(20);
+
+        radio.setCurrentStation(18);
+
+        int expected = 18;
+        int actual = radio.getCurrentStation();
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
     public void CurrentStation() {
         Radio radio = new Radio();
         radio.setCurrentStation(0);
